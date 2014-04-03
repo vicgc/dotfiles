@@ -324,6 +324,8 @@ Bundle 'nvie/vim-pyunit'
 Bundle 'klen/python-mode'
 " Enhanced statusline
 Bundle 'bling/vim-airline'
+" Terminal inside Vim buffer
+Bundle 'vim-scripts/Conque-Shell'
 
 " Turn on filetype recognition, load filetype specific plugins and indents.
 filetype plugin indent on
