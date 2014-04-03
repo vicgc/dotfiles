@@ -102,5 +102,6 @@ aptitude -y install python3-all python2.7-dev python3-dev
 pip install virtualenvwrapper
 
 # Multimedia
-aptitude -y install goldendict vlc x264 feh geeqie
+aptitude -y install goldendict vlc x264 feh geeqie mupdf
 aptitude -y install flashplugin-nonfree ttf-mscorefonts-installer
+aptitude -y install keepassx
