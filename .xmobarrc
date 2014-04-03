@@ -30,7 +30,7 @@
 Config {
   -- Set font and default foreground/background colors. Note that
   -- the height of xmobar is controlled by the font you use.
-  font = "xft:Liberation Mono-14",
+  font = "xft:Liberation Mono-12",
   bgColor = "#002b36",
   fgColor = "#839496",
 
@@ -66,23 +66,10 @@ Config {
     -- Date formatting
     Run Date "%a %b %_d <fc=#859900>%H:%M:%S</fc>" "date" 10,
 
-    -- Battery information. This is likely to require some customization
-    -- based upon your specific hardware. Or, for a desktop you may want
-    -- to just remove this section entirely.
-    Run Battery [
-      "-t", "<acstatus>: <fc=#d33682><left>% </fc>",
-      "--",
-      "-c", "charge_full",
-      "-O", "AC",
-      "-o", "Bat",
-      "-h", "green",
-      "-l", "red"
-    ] 10,
-
     -- To get volume information, we run a custom bash script.
     -- This is because the built-in volume support in xmobar is disabled
     -- in Debian and derivatives like Ubuntu.
-    Run Com "~/.xmonad/get_volume.sh" [] "myvolume" 10,
+    Run Com "/home/zoresvit/.xmonad/get_volume.sh" [] "myvolume" 10,
 
 
     -- This line tells xmobar to read input from stdin. That's how we
@@ -99,6 +86,6 @@ Config {
 
    -- Overall template for the layout of the xmobar contents. Note that
    -- space is significant and can be used to add padding.
-   template = "%StdinReader% }{ <fc=#586e75>%battery% %cpu% %memory% Vol: %myvolume%</fc> %date% "
+   template = "%StdinReader% }{ <fc=#586e75>%cpu% %memory% Vol: %myvolume%</fc> %date% "
 }
 

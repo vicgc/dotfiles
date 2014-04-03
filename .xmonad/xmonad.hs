@@ -182,15 +182,15 @@ myKeyBindings =
     -- Shift window to next workspace
     , ((myModMask .|. shiftMask, xK_Right), shiftToNext)
     , ((myModMask, xK_u), focusUrgent)
-    , ((myModMask, xK_p), spawn "dmenu_run -i -nb '#002b36' -nf  '#839496' -sb '#073642' -sf '#93a1a1' -fn 'Liberation Mono-14'")
+    , ((myModMask, xK_p), spawn "dmenu_run -i -nb '#002b36' -nf  '#839496' -sb '#073642' -sf '#93a1a1' -fn 'Liberation Mono-13'")
     , ((myModMask .|. controlMask, xK_l), spawn "xscreensaver-command -lock")
     -- Volume control
-    , ((myModMask .|. controlMask, xK_m), spawn "amixer -D pulse set Master 1+ toggle")
-    , ((myModMask .|. controlMask, xK_Down), spawn "amixer -q -c 1 set Master 10%-")
-    , ((myModMask .|. controlMask, xK_Up), spawn "amixer -q -c 1 set Master 10%+")
-    , ((0, 0x1008ff12), spawn "amixer -D pulse set Master 1+ toggle")
-    , ((0, 0x1008ff13), spawn "amixer -q -c 1 set Master 10%+")
-    , ((0, 0x1008ff11), spawn "amixer -q -c 1 set Master 10%-")
+    , ((myModMask .|. controlMask, xK_m), spawn "amixer -D pulse set Headphone 1+ toggle")
+    , ((myModMask .|. controlMask, xK_Down), spawn "amixer -q -c 1 set Headphone 10%-")
+    , ((myModMask .|. controlMask, xK_Up), spawn "amixer -q -c 1 set Headphone 10%+")
+    , ((0, 0x1008ff12), spawn "amixer -D pulse set Headphone 1+ toggle")
+    , ((0, 0x1008ff13), spawn "amixer -q -c 1 set Headphone 10%+")
+    , ((0, 0x1008ff11), spawn "amixer -q -c 1 set Headphone 10%-")
     -- Brightness control
     , ((myModMask .|. controlMask, xK_Right), spawn "xbacklight -inc 5")
     , ((myModMask .|. controlMask, xK_Left), spawn "xbacklight -dec 5")
