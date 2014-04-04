@@ -220,12 +220,12 @@ main = do
       , workspaces = myWorkspaces
       , logHook = dynamicLogWithPP $ xmobarPP {
             ppOutput = hPutStrLn xmproc
-          , ppCurrent = xmobarColor solarizedGreen "" . wrap myCurrentWSLeft myCurrentWSRight
+          , ppCurrent = xmobarColor solarizedYellow "" . wrap myCurrentWSLeft myCurrentWSRight
           , ppHidden = xmobarColor solarizedBase0 ""
           , ppHiddenNoWindows = xmobarColor solarizedBase02 ""
           , ppLayout = xmobarColor solarizedCyan ""
           , ppTitle = xmobarColor solarizedBase1 "" . shorten myTitleLength
           , ppUrgent = xmobarColor solarizedRed "" . wrap myUrgentWSLeft myUrgentWSRight
-          , ppVisible = xmobarColor solarizedBase01 "" . wrap myVisibleWSLeft myVisibleWSRight
+          , ppVisible = xmobarColor solarizedGreen "" . wrap myVisibleWSLeft myVisibleWSRight
           }
       } `additionalKeys` myKeyBindings
