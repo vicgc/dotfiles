@@ -145,7 +145,9 @@ chatLayout = renamed [Replace "Chat"]
     isSkype = (Title "zoresvit - Skype™")
     isPidgin = (Title "Buddy List")
 
-fullLayout = renamed [Replace "F"] $ avoidStruts $ noBorders $ (Full)
+fullLayout = avoidStruts(smartBorders(
+  renamed [Replace "R"] (ResizableTall 1 (3/100) (1/2) []) 
+  ||| renamed [Replace "F"] (Full)))
 
 -- Here we combine our default layouts with our specific, workspace-locked
 -- layouts.
