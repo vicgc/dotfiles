@@ -63,6 +63,7 @@ aptitude -y install xserver-xorg xserver-xorg-input-synaptics xinit slim
 aptitude -y install xmonad libghc-xmonad-dev libghc-xmonad-contrib-dev xmobar
 aptitude -y install xcompmgr  # for transparency support
 aptitude -y install icc-profiles sampleicc-tools  # Color profiles
+aptitude -y install gnome-screensaver
 
 # Sound
 aptitude -y install alsa pulseaudio paman pavucontrol
